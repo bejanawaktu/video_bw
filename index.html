@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Reels - Light Theme</title>
+    <title>The Reels - Transparent</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -17,31 +17,25 @@
         }
     </script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen py-10">
+<!-- Body dibuat transparan, tanpa padding/margin yang bikin jarak -->
+<body class="bg-transparent m-0 p-0 overflow-hidden">
 
-    <!-- Container Utama Background Putih -->
-    <section class="w-full max-w-sm px-5 pt-6 pb-10 relative overflow-hidden bg-white shadow-2xl rounded-3xl">
-
-        <!-- Efek Blur Background (Disesuaikan agar tidak terlalu mencolok di bg putih) -->
-        <div class="absolute top-10 left-0 w-32 h-32 bg-brandGreen rounded-full blur-[60px] opacity-20 pointer-events-none"></div>
-        <div class="absolute bottom-10 right-0 w-24 h-24 bg-brandGreen rounded-full blur-[50px] opacity-15 pointer-events-none"></div>
+    <!-- Container dibikin polosan tanpa background, shadow, atau border-radius luar -->
+    <section class="w-full max-w-sm mx-auto relative pt-2 pb-2">
 
         <!-- Header: Judul & Tombol Instagram -->
-        <div class="flex items-center justify-between mb-5 relative z-10">
+        <div class="flex items-center justify-between mb-4 relative z-10 px-1">
             <div>
                 <div class="flex items-center gap-2 mb-1">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                     </span>
-                    <!-- Teks diubah jadi abu-abu agar terbaca di bg putih -->
                     <p class="text-[7px] tracking-[0.25em] text-gray-500 uppercase font-semibold">Latest Content</p>
                 </div>
-                <!-- Teks judul diubah jadi abu-abu gelap/hitam -->
                 <h2 class="text-xl font-black tracking-tight text-gray-900 leading-none">THE <span class="text-brandGreen">REELS</span></h2>
             </div>
             
-            <!-- Tombol IG diubah jadi terang (bg abu-abu muda, border abu-abu) -->
             <a href="https://www.instagram.com/bejanawaktu" target="_blank" class="flex items-center gap-1.5 bg-gray-50 border border-gray-200 rounded-full px-3 py-1.5 transition hover:bg-gray-100">
                 <svg class="w-3 h-3 text-gray-700" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -53,7 +47,7 @@
         <!-- Video Grid -->
         <div class="flex gap-2.5 relative z-10" style="height: 300px;">
 
-            <!-- Video Utama Kiri (Isi tetap dark/teks putih karena ada overlay gradient di videonya) -->
+            <!-- Video Utama Kiri -->
             <div onclick="window.open('https://www.instagram.com/bejanawaktu/reel/DXEXUXJDlLT/', '_blank')" class="reel-card relative rounded-[22px] overflow-hidden cursor-pointer flex-shrink-0 shadow-lg group" style="width: 55%; height: 100%;">
                 <video autoplay muted loop playsinline class="w-full h-full object-cover scale-[1.02] group-hover:scale-[1.06] transition-transform duration-700">
                     <source src="https://www.image2url.com/r2/default/videos/1777006600163-0fc2bdae-c7ae-4861-821a-ff97fd930256.mp4" type="video/mp4">
@@ -138,8 +132,8 @@
             </div>
         </div>
 
-        <!-- Garis pembatas dan Link Footer diubah menyesuaikan background putih -->
-        <div class="relative z-10 mt-5 flex items-center justify-between">
+        <!-- Garis pembatas dan Link Footer -->
+        <div class="relative z-10 mt-4 flex items-center justify-between px-1">
             <div class="h-[1px] flex-1 bg-gradient-to-r from-transparent to-gray-200 mr-3"></div>
             <a href="https://www.instagram.com/bejanawaktu" target="_blank" class="flex items-center gap-1.5 text-[7.5px] text-gray-400 hover:text-gray-800 transition font-bold tracking-wider uppercase">
                 See All Reels
